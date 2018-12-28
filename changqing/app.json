@@ -1,0 +1,38 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/message/message",
+    "pages/more/more"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "white",
+    "navigationBarTitleText": "长青盒子",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "position": "bottom",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/main.png",
+        "iconPath": "images/main-untouch.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/class.png",
+        "iconPath": "images/class-untouch.png",
+        "pagePath": "pages/message/message",
+        "text": "课表"
+      },
+      {
+        "selectedIconPath": "images/more.png",
+        "iconPath": "images/more-untouch.png",
+        "pagePath": "pages/more/more",
+        "text": "更多"
+      }
+    ]
+  }
+}

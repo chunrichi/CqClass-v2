@@ -1,0 +1,44 @@
+<!--changqing/pages/index/index.wxml-->
+
+<view class='header'>
+  <!-- 背景照片 -->
+  <image class='header-image' src='../../images/header.jpg'>
+  </image>
+  <!-- 显示信息区 -->
+  <view class='headerArea'>
+    <image class='imgPhoto' src='../../images/school.jpg'></image>
+    <view class='schoolName'>
+      {{schoolName}}
+    </view>
+  </view>
+</view>
+
+<!-- 模糊 -->
+<view class='headreShadow'>
+</view>
+<!-- 课程信息 -->
+<view class='class-message-box'>
+  <view class='class-message-title'>
+    <image class='title-icon' src='../../images/icon-green.png'></image>
+    <text class='title-text'>{{Week}}</text>
+  </view>
+  <view class='class-messages'>
+    <view class='class-message' wx:if='{{login_status}}' style='text-align:center;margin:25px auto;width:525rpx;height:60px'>
+      <view style='line-height:60px;'>登录</view>
+    </view>
+    <view class='class-message' wx:for='{{todayClass}}' wx:key='todayClass'>
+      <view class='crouseTime'>
+        {{item.crouseTime}}
+      </view>
+      <view class='crouse-box'>
+        <view class='crouseName'>
+          {{item.crouseName}}
+        </view>
+        <view class='roomName'>
+          <image class='room-icon' src='../../images/icon-room.png'></image>{{item.roomName}}
+        </view>
+      </view>
+    </view>
+  </view>
+
+</view>
