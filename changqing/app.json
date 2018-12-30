@@ -2,7 +2,9 @@
   "pages": [
     "pages/index/index",
     "pages/message/message",
-    "pages/more/more"
+    "pages/more/more",
+    "pages/about/about",
+    "pages/updateLog/updateLog"
   ],
   "window": {
     "backgroundTextStyle": "dark",

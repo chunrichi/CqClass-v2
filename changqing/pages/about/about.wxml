@@ -1,0 +1,24 @@
+<!--pages/about/about.wxml-->
+<view class='logo-box'>
+  <image class='logo' src='../../images/logo.png'></image>
+  <view class='logo-text'>「长青课表」</view>
+  <view class='logo-text'>v2.0</view>
+</view>
+
+<view class='about-box'>
+  <text class='about-text'>「长青课表」小程序为个人所写的练手程序，提供课表查询服务（暂时只有一个功能)。
+</text>
+  <view class='about-title'>
+    数据来源</view>
+  <view class='about-text'>课程信息均来自学校官方教务系统，利用爬虫分析得到。</view>
+  <view class='about-title'>资源来源</view>
+  <view class='about-text'>图标来源：iconfont - 阿里健康品牌图标库</view>
+
+  <view class='about-text'>背景图来源：PEXELS</view>
+  <view class='about-title'>开源地址</view>
+  <view class='about-text'>https://github.com/chunrichi/CqClass-v2</view>
+  <view class='about-title'>最后</view>
+  <view class='about-text'>
+    如有问题或意见请联系QQ：545049148
+  </view>
+</view>

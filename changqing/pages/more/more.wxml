@@ -1,2 +1,46 @@
 <!--changqing/pages/more/more.wxml-->
-<text>changqing/pages/more/more.wxml</text>
+<view class='header'>
+  <image class='header-image' src='../../images/header.jpg'>
+  </image>
+</view>
+
+
+<view class='student-message-box'>
+  <view class='student-message'>
+    <view class='student-name'>{{name}}</view>
+    <view class='student-department'>{{department}}</view>
+  </view>
+  <button class='wx-portrait' wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo" >点我获取头像 </button>
+  <block wx:else>
+    <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+    <!-- <text class="userinfo-nickname">{{userInfo.nickName}}</text> -->
+  </block>
+
+</view>
+
+<view class='setting-box'>
+  <view class='setting' bindtap='redirectToAbout'>
+    <view class='setting-text'>关于课表</view>
+    <image class='setting-icon' src='../../images/next.png'></image>
+  </view>
+  <view class='setting' bindtap='redirectToLog'>
+    <view class='setting-text'>更新日志</view>
+    <image class='setting-icon' src='../../images/next.png'></image>
+  </view>
+  <view class='setting' bindtap='openSetting'>
+    <view class='setting-text'>授权管理</view>
+    <image class='setting-icon' src='../../images/next.png'></image>
+  </view>
+</view>
+
+<view class='clear-box' wx:if="{{signIn}}">
+  <!-- <view class='clear'>
+    <view class='clear-text'>清理缓存</view>
+    <image class='clear-icon' src='../../images/warning.png'></image>
+  </view> -->
+  <!-- 根据是否登录显示 -->
+  <view class='clear' >
+    <view class='clear-text'>退出登录</view>
+    <image class='clear-icon' src='../../images/warning.png'></image>
+  </view>
+</view>

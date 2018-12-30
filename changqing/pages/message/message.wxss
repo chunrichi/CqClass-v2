@@ -1,1 +1,72 @@
 /* changqing/pages/message/message.wxss */
+
+page {
+  padding: 0;
+  margin: 0;
+}
+
+.signIn-background {
+  /* background-color: #b6eb91; */
+  height: 210rpx;
+  width: 750rpx;
+  overflow: hidden;
+}
+
+.signIn-image{
+  position: relative;
+  top: -46px;
+  width: 750rpx;
+}
+
+.signIn-box {
+  position: relative;
+  top: -66px;
+  height: 240px;
+  width: 620rpx;
+  border-radius: 8px;
+  margin: auto;
+  background-color: white;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.603);
+}
+
+.gray-tip {
+  font-size: 50%;
+  color: #9d9d9d;
+  text-align: center;
+  padding: 20px;
+  padding-bottom: 10px;
+}
+
+.input-box {
+  margin: 15px auto;
+  width: 86%;
+}
+
+.input-title {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 20px;
+}
+
+.input-message {
+
+  display: inline-block;
+  padding-left: 10px;
+  vertical-align: middle;
+  /* background-color: #60ebbc; */
+  margin-left: 10px;
+  border-bottom: 1px solid #999;
+  font-size: 86%;
+}
+
+.input-submit {
+  height: 32px;
+  width: 128px;
+  margin-top: 28px;
+  line-height: 32px;
+  font-size: 70%;
+  background-color: #b6eb91;
+  color: white;
+  border: 0.3px;
+  border-radius: 8px;
+}

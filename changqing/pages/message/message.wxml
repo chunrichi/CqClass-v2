@@ -1,4 +1,35 @@
 <!--changqing/pages/message/message.wxml-->
-<view class='signIn-box'>
+<view wx-if="{{!signIn}}">
+  <view class='signIn-background'>
+    <image class='signIn-image' src='../../images/header.jpg'></image>
+  </view>
+  <view class='signIn-box'>
+    <view class='gray-tip'>
+      <text>
+  请使用长江大学教务处系统账号登录</text>
+      <text>
+  本平台不会保存您的密码</text>
+    </view>
+
+    <form>
+      <view class='input-box'>
+        <view class='input-title'>
+          学号
+        </view>
+        <input class='input-message' type="number" placeholder="请输入学号" />
+      </view>
+      <view class='input-box'>
+        <view class='input-title'>
+          密码
+        </view>
+        <input class='input-message' password type="text" placeholder="请输入密码" />
+      </view>
+      <button class='input-submit' form-type="submit">登录</button>
+    </form>
+  </view>
+</view>
+
+<view wx:if="{{signIn}}">
+
 
 </view>

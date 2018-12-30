@@ -30,13 +30,48 @@
 			"current": -1,
 			"list": []
 		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
 		"game": {
 			"currentL": -1,
 			"list": []
 		},
 		"miniprogram": {
-			"current": -1,
-			"list": []
+			"current": 4,
+			"list": [
+				{
+					"id": 0,
+					"name": "sign-in page",
+					"pathName": "pages/message/message",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "more",
+					"pathName": "pages/more/more",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "about-page",
+					"pathName": "pages/about/about",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "log-page",
+					"pathName": "pages/updateLog/updateLog",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "class-page",
+					"pathName": "pages/message/message",
+					"query": ""
+				}
+			]
 		}
 	}
 }

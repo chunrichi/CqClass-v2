@@ -1,0 +1,37 @@
+/* pages/updateLog/updateLog.wxss */
+
+.logo-box {
+  margin: 20px auto;
+  width: 100px;
+  border: 0.1px solid white;
+}
+
+.logo {
+  margin: 5px 20px;
+  width: 60px;
+  height: 60px;
+}
+
+.logo-text {
+  font-size: 60%;
+  text-align: center;
+}
+
+.about-box {
+  width: 80%;
+  margin: 5px auto;
+}
+
+.about-text {
+  font-size: 60%;
+  line-height: 90%;
+  margin: 10px 0;
+  color: #8d8d8d;
+  border: 0.1px solid white;
+}
+
+.about-title {
+  font-size: 75%;
+  margin: 13px 0;
+  border: 0.1px solid white;
+}

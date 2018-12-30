@@ -1,0 +1,14 @@
+<!--pages/updateLog/updateLog.wxml-->
+<view class='logo-box'>
+  <image class='logo' src='../../images/log.png'></image>
+  <view class='logo-text'>更新日志</view>
+</view>
+
+<view class='about-box'>
+  <view class='about-title'>
+    v2.0</view>
+  <view class='about-text'>修改：优化当日课程界面</view>
+  <view class='about-title'>
+    v1.0</view>
+  <view class='about-text'>主体功能完成</view>
+</view>
