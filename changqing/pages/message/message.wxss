@@ -12,7 +12,7 @@ page {
   overflow: hidden;
 }
 
-.signIn-image{
+.signIn-image {
   position: relative;
   top: -46px;
   width: 750rpx;
@@ -49,7 +49,6 @@ page {
 }
 
 .input-message {
-
   display: inline-block;
   padding-left: 10px;
   vertical-align: middle;
@@ -69,4 +68,58 @@ page {
   color: white;
   border: 0.3px;
   border-radius: 8px;
+}
+
+.top {
+  display: flex;
+  /* 弹性布局flex，详情见 http://www.ruanyifeng.com/blog/2015/07/flex-grammar.html?utm_source=tuicool *//* 主轴方向：水平 */
+  flex-direction: row;
+  /* 主轴对其：右对其 */
+  justify-content: flex-end;
+  margin-left: 40rpx;
+  color: #6ca9d6;
+  background-color: #b6eb91;
+}
+
+.top-text {
+  width: 110rpx;
+  height: 36rpx;
+  font-size: 10pt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.class-box {
+  height: 1000rpx;
+  /* 微信认为 750rpx=20rem 为全屏宽度 *//* https://blog.csdn.net/qq_31383345/article/details/52817807 */
+  width: 750rpx;
+  display: flex;
+}
+
+.left-num {
+  width: 35rpx;
+  height: 100rpx;
+  font-size: 9pt;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-item {
+  position: absolute;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  width: 95rpx;
+  height: 100rpx;
+}
+
+
+
+.smalltext {
+  font-size: 8pt;
+  color: #fff;
+  padding-left: 2rpx;
 }

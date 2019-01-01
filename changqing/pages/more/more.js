@@ -8,6 +8,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    signIn:true,
     department: '计算机科学学院',
     name: '临时访客',
     userInfo: {},
@@ -19,6 +20,7 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    // 从app.globalData获取
     if (app.globalData.userInfo) {
       this.setData({
         userInfo: app.globalData.userInfo,
