@@ -8,8 +8,8 @@ Page({
    * 页面的初始数据
    */
   data: {
-    signIn:true,
-    department: '计算机科学学院',
+    signIn: true,
+    department: '学院',
     name: '临时访客',
     userInfo: {},
     hasUserInfo: false,
@@ -25,7 +25,7 @@ Page({
       this.setData({
         userInfo: app.globalData.userInfo,
         hasUserInfo: true,
-        name: app.globalData.userInfo.nickName
+        // name: app.globalData.userInfo.nickName
       })
     } else if (this.data.canIUse) {
       // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
@@ -34,7 +34,7 @@ Page({
         this.setData({
           userInfo: res.userInfo,
           hasUserInfo: true,
-          name: app.globalData.userInfo.nickName
+        //   name: app.globalData.userInfo.nickName
         })
       }
     } else {
@@ -45,7 +45,7 @@ Page({
           this.setData({
             userInfo: res.userInfo,
             hasUserInfo: true,
-            name: app.globalData.userInfo.nickName
+            // name: app.globalData.userInfo.nickName
           })
         }
       })
@@ -63,7 +63,16 @@ Page({
    * 生命周期函数--监听页面显示
    */
   onShow: function() {
-
+      let that = this
+      wx.getStorage({
+          key: 'userInfo',
+          success: function(res) {
+              that.setData({
+                  name: res.studentName,
+                  department: res.major
+              })
+          },
+      })
   },
 
   /**
@@ -132,5 +141,12 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  logout: function(){
+      wx.clearStorage();
+      wx.showToast({
+          title: '成功',
+          duration: 1000
+      })
   }
 })

@@ -24,8 +24,7 @@ page {
 }
 
 .imgPhoto {
-  /* display: inline; */
-  /* background-color: blue; */
+  /* display: inline; *//* background-color: blue; */
   border-radius: 50%;
   width: 30px;
   height: 30px;
@@ -83,11 +82,81 @@ page {
   margin: 13px auto;
   box-shadow: -1px 1px 8px rgba(27, 27, 27, 0.336);
   width: 95%;
-  height: 78x;
   background: white;
   border-radius: 15px;
 }
 
+/* 课表信息内 各个信息的样式 */
+
+.class-message {
+  /* 改用flex布局后 对message添加的样式 */
+  display: flex;
+  flex-direction: row;
+}
+
+.crouseTime {
+  /* background: red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+  height: 78px;
+}
+
+.crouse-box {
+  /* background: yellow; */
+  display: flex;
+  flex-direction: column;
+  width: 85%;
+}
+
+.line-box {
+  /* 行 布局-- 针对 */
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.crouseName {
+  margin-top: 13px;
+  margin-left: 14px;
+}
+
+.teacherName {
+  margin: 13px 34px 0 auto;
+  font-size: 9px;
+}
+
+.roomName {
+  margin-top: 11px;
+  margin-left: 20px;
+  font-size: 9px;
+  align-self: flex-start;
+}
+
+.roomIcon {
+  margin-right: 5px;
+  height: 7.25px;
+  width: 7.25px;
+}
+
+.vaildWeek {
+  margin-top: 11px;
+  margin-left:45px;
+  font-size: 9px;
+}
+
+/*添加教师名和周数之前的css 添加后有问题 改用上面的*/
+
+/* .teacherName {
+  display: none;
+}
+
+.vaildWeek {
+  display: none;
+} */
+
+/* 
 .crouseTime {
   position: relative;
   top: 26px;
@@ -113,10 +182,9 @@ page {
   font-size: 9px;
 }
 
-.room-icon{
+.room-icon {
   position: relative;
-
   left: -6px;
   height: 7.25px;
   width: 7.25px;
-}
+} */

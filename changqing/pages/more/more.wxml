@@ -39,7 +39,7 @@
     <image class='clear-icon' src='../../images/warning.png'></image>
   </view> -->
   <!-- 根据是否登录显示 -->
-  <view class='clear' >
+  <view class='clear' bindtap='logout' >
     <view class='clear-text'>退出登录</view>
     <image class='clear-icon' src='../../images/warning.png'></image>
   </view>

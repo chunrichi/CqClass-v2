@@ -38,6 +38,8 @@ page {
 }
 
 .input-box {
+  /* 为图标pwd-icon position准备 */
+  position: relative;
   margin: 15px auto;
   width: 86%;
 }
@@ -56,6 +58,14 @@ page {
   margin-left: 10px;
   border-bottom: 1px solid #999;
   font-size: 86%;
+}
+
+.pwd-icon {
+  position: absolute;
+  right: 20px;
+  z-index: 100;
+  width: 25px;
+  height: 25px;
 }
 
 .input-submit {
@@ -116,10 +126,9 @@ page {
   height: 100rpx;
 }
 
-
-
 .smalltext {
+    text-align: center;
   font-size: 8pt;
   color: #fff;
-  padding-left: 2rpx;
+  /* padding-left: 2rpx; */
 }

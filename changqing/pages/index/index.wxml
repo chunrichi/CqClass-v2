@@ -23,19 +23,41 @@
     <text class='title-text'>{{Week}}</text>
   </view>
   <view class='class-messages'>
-    <view class='class-message' wx:if='{{login_status}}' style='text-align:center;margin:25px auto;width:525rpx;height:60px'>
-      <view style='line-height:60px;'>登录</view>
+    <view class='class-message' wx:if='{{!login_status}}' style='text-align:center;margin:25px auto;width:525rpx;height:60px' bindtap='moveToClass'>
+      <view style='line-height:60px;width:100%'>登 录</view>
+    </view>
+    <view class='class-message' wx:if='{{noClassToday}}' style='text-align:center;width: 85%;'>
+      <view style='line-height:60px;width:100%'>今日没课</view>
     </view>
     <view class='class-message' wx:for='{{todayClass}}' wx:key='todayClass'>
+      <!-- 上课时间 -->
       <view class='crouseTime'>
-        {{item.crouseTime}}
+        {{item.courseTime+1}}
       </view>
+      <!-- 更多信息框 -->
       <view class='crouse-box'>
-        <view class='crouseName'>
-          {{item.crouseName}}
+        <!-- 第一行信息 -->
+        <view class='line-box'>
+          <!-- 课程名 -->
+          <view class='crouseName'>
+            {{item.courseName}}
+          </view>
+
         </view>
-        <view class='roomName'>
-          <image class='room-icon' src='../../images/icon-room.png'></image>{{item.roomName}}
+        <!-- 第二行信息 -->
+        <view class='line-box'>
+          <!-- 教室名 -->
+          <view class='roomName'>
+            <image class='roomIcon' src='../../images/icon-room.png'></image>{{item.roomName}}
+          </view>
+          <!-- 上课周数 -->
+          <view class='vaildWeek'>
+            {{item.vaildWeek}}周
+          </view>
+          <!-- 教师名 -->
+          <view class='teacherName'>
+            {{item.teacherName}}
+          </view>
         </view>
       </view>
     </view>
