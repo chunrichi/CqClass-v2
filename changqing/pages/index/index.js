@@ -43,18 +43,22 @@ Page({
             that.setData({
                 login_status: true
             })
+            console.log(tc[todayIs])
             // 判断是否课表为空
-            if (tc[todayIs] == []) {
-
+            if (tc[todayIs].length == 0) {
                 that.setData({
-                    noClassToday: true,
-                    todayClass:[]
+                    noClassToday: true
                 })
             }else{
                 that.setData({
                     todayClass: tc[todayIs]
                 })
             }
+        }else{
+            that.setData({
+                login_status: false,
+                todayClass:[]
+            })
         }
     },
 

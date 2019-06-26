@@ -23,7 +23,7 @@ Page({
         classLength: 2,
         pwd_icon: false, // 密码图标
         passwordStatus: true, // 是否隐藏密码
-        semester_id: '49'
+        semester_id: ''
     },
 
 
@@ -33,6 +33,14 @@ Page({
      */
     onLoad: function(options) {
         var that = this;
+
+        that.setData({
+            semester_id:app.globalData.semester_id
+        })
+        wx.setNavigationBarTitle({
+            title: '课表： 2019-上半年'
+        })
+
         var uid = wx.getStorageSync('uid')
         var pwd = wx.getStorageSync('pwd')
         if (pwd != "" || wx.getStorageSync('signIn')) {
@@ -110,7 +118,7 @@ Page({
      * 生命周期函数--监听页面初次渲染完成
      */
     onReady: function() {
-
+        
     },
 
     /**
@@ -281,13 +289,17 @@ Page({
     },
     toOtherClass: function() {
         var that = this;
-        var itemValue = ['50', '49', '48'];
+        var itemValue = ['50', '49', '48']
+        var itemLists = ['课表： 2019-上半年', '课表： 2018-下半年', '课表： 2018-上半年']
         wx.showActionSheet({
-            itemList: ['课表： 2019-上半年', '课表： 2018-下半年', '课表： 2018-上半年'],
+            itemList: itemLists,
             success: function(res) {
                 // console.log(that.data);
                 // console.log(res.tapIndex)
-                if (that.data.semester_id != res.tapIndex) {
+                if (that.data.semester_id != itemValue[res.tapIndex]) {
+                    wx.setNavigationBarTitle({
+                        title: itemLists[res.tapIndex]
+                    })
                     that.setData({
                         semester_id: itemValue[res.tapIndex],
                     });

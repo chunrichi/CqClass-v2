@@ -55,5 +55,6 @@ App({
         WEEKS: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
         startClassDay: new Date('2018-9-3'),
         // startClassDay: new Date('2019-2-25'),
+        semester_id: '50'
     }
 })
